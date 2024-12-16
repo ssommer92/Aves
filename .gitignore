@@ -3,6 +3,8 @@
 /build
 /resources
 /.vscode
+/.idea
 /doc
 /dist
-*.swp
+*.sw
+*.iml

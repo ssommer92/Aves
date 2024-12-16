@@ -104,41 +104,41 @@ Für die Konfiguration mit einer anderen Spieleranzahl gibt es vorgefertigte Kon
 ##### Schritte zur Konfiguration
 
 1. **Launcher starten**  
-   Starten Sie den Launcher, aber drücken Sie noch nicht auf den Start-Button.
-<br>
-<br>
-2. **Konfigurationsdateien auswählen**  
-   Gehen Sie zum Ordner **PreSettings** im Hauptverzeichnis und kopieren Sie die folgenden beiden Dateien für die gewünschte Spieleranzahl:
+  Starten Sie den Launcher, aber drücken Sie noch nicht auf den Start-Button.
 
-   - **Config.txt**  
-     Diese Datei enthält die allgemeine Spielkonfiguration in folgender Reihenfolge:
-     - Anzahl der Spieler
-     - Anzahl der Karten
-     - Wahrscheinlichkeiten der Biome bei der Generierung
-     - Anzahl der vorplatzierten Karten
-     - Format für die vorplatzierten Karten (Format: SPIELERID, REIHE, SPALTE, DREHUNG, BIOM).
-  <br>
-  <br>
-   - **Settings.txt**  
-     Diese Datei enthält benutzerspezifische Einstellungen:
-     - Größe des Spielbretts
-     - Startbedingungen
-     - Einschalten der Musik (true oder false)
-     - Verzögerung des zufälligen Computerspielers (RANDOM_AI) in ms
-     - Die Namen der Spieler (z.B. Spieler 1, Spieler 2,...)
-     - Die Einstellung für Computerspieler (false) oder menschliche Spieler (true).
+
+2. **Konfigurationsdateien auswählen**  
+  Gehen Sie zum Ordner **PreSettings** im Hauptverzeichnis und kopieren Sie die folgenden beiden Dateien für die gewünschte Spieleranzahl:
+
+  - **Config.txt**  
+    Diese Datei enthält die allgemeine Spielkonfiguration in folgender Reihenfolge:
+    - Anzahl der Spieler
+    - Anzahl der Karten
+    - Wahrscheinlichkeiten der Biome bei der Generierung
+    - Anzahl der vorplatzierten Karten
+    - Format für die vorplatzierten Karten (Format: SPIELERID, REIHE, SPALTE, DREHUNG, BIOM).
+
+  - **Settings.txt**  
+    Diese Datei enthält benutzerspezifische Einstellungen:
+    - Größe des Spielbretts
+    - Startbedingungen
+    - Einschalten der Musik (true oder false)
+    - Verzögerung des zufälligen Computerspielers (RANDOM_AI) in ms
+    - Die Namen der Spieler (z.B. Spieler 1, Spieler 2,...)
+    - Die Einstellung für Computerspieler (false) oder menschliche Spieler (true).
 
     Jede Spieleranzahl hat ihren eigenen Ordner und die entsprechenden Dateien. Die Einstellungen in den Dateien können ebenfalls verändert werden.
-<br>
-<br>
+
+
 3. **Dateien in den Resource-Ordner einfügen**  
-   Kopieren Sie die entsprechenden **Config.txt** und **Settings.txt** in den **resources**-Ordner im Hauptverzeichnis des Projektes:
+  Kopieren Sie die entsprechenden **Config.txt** und **Settings.txt** in den **resources**-Ordner im Hauptverzeichnis des Projektes:
 
-   - Beispiel:
-     - Für ein Solo-Spiel kopieren Sie die Dateien aus dem Ordner **PreSettings/1Spieler** in den **resources**-Ordner.
-     - Für ein 3-Spieler-Spiel kopieren Sie die Dateien aus dem Ordner **PreSettings/3Spieler** in den **resources**-Ordner.
+  - Beispiel:
+    - Für ein Solo-Spiel kopieren Sie die Dateien aus dem Ordner **PreSettings/1Spieler** in den **resources**-Ordner.
+    - Für ein 3-Spieler-Spiel kopieren Sie die Dateien aus dem Ordner **PreSettings/3Spieler** in den **resources**-Ordner.
 
-     **Hinweis**: Nach dem Einfügen der Dateien dürfen die Einstellungen nicht mehr in den Einstellungen des Launchers verändert werden.
+    **Hinweis**: Nach dem Einfügen der Dateien dürfen die Einstellungen nicht mehr in den Einstellungen des Launchers verändert werden.
+
 
 4. **Spiel starten**  
    Starten Sie das Spiel über den Start-Button. Es wird nun mit den geladenen Konfigurationseinstellungen (basierend auf den kopierten Dateien) gestartet.
