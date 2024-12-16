@@ -1,0 +1,59 @@
+<project name="Prog" basedir="." default="jar">
+
+    <property name="src.dir" location="src" />
+    <property name="lib.dir" location="lib" />
+    <property name="build.dir" location="build" />
+    <property name="classes.dir" location="${build.dir}/classes" />
+    <property name="doc.dir" location="${build.dir}/javadoc" />
+    <property name="jar.dir" location="${build.dir}/jar" />
+    <property name="res.dir" location="resources" />
+
+    <property name="Main.Class" value="doerfer.main.Mainclass" />
+
+
+    <!-- classpath -->
+    <path id="build.classpath">
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar" />
+        </fileset>
+    </path>
+
+    <!-- cleans the build direction -->
+    <target name="clean">
+        <delete dir="${build.dir}" />
+        <delete dir="${res.dir}" />
+    </target>
+
+    <!-- compiles the src direction -->
+    <target name="compile" depends="clean">
+        <mkdir dir="${classes.dir}" />
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" includeantruntime="false" classpathref="build.classpath">
+            <compilerarg value="-Xlint:all" />
+        </javac>
+    </target>
+
+    <!-- DEFAULT -->
+    <!-- jars the classes direction and includes SVGSalamander and the Doerfer-Preset-->
+    <target name="jar" depends="compile">
+        <mkdir dir="${jar.dir}" />
+        <jar destfile="${jar.dir}/aves.jar" >
+            <fileset dir="${classes.dir}" />
+            <fileset dir="${src.dir}/resources" />
+            <zipgroupfileset dir="lib" includes="svgSalamander-c281ca2.jar Doerfer-Preset-v1.3.2.jar commons-cli-1.5.0.jar" />
+            <manifest>
+                <attribute name="Main-Class" value="${Main.Class}" />
+            </manifest>
+        </jar>
+    </target>
+
+    <!-- start with "ant javadoc" -->
+    <!-- generates the Javadoc -->
+    <target name="javadoc" depends="jar">
+        <mkdir dir="${doc.dir}" />
+        <javadoc destdir="${doc.dir}" private="true" encoding="ISO8859_15" additionalparam="-Xdoclint:all">
+            <fileset dir="${src.dir}" />
+            <classpath refid="build.classpath"/>
+        </javadoc>
+    </target>
+
+</project>

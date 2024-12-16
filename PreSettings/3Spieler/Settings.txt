@@ -1,0 +1,10 @@
+1600
+900
+false
+1000
+Spieler 1
+Spieler 2
+Spieler 3
+true
+false
+false
